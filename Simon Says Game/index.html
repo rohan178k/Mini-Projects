@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Says Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="title">
+      <h1>The Simon Says Game</h1>
+      <h2 class="description">Press the START key to start the game!!</h2>
+    </div>
+    <br />
+    <button class="startbtn">START</button>
+    <div class="btn-container">
+      <div class="btn red" type="button" id="red"></div>
+      <div class="btn green" type="button" id="green"></div>
+      <div class="btn yellow" type="button" id="yellow"></div>
+      <div class="btn blue" type="button" id="blue"></div>
+    </div>
+    <div class="scoreboard-div">
+      <h1 class="scoreboard-title">Scoreboard</h1>
+      <div class="highscore-div">
+        <h2 class="highscore">Your Highscore will appear here!</h2>
+      </div>
+      <div class="other-scores">
+        <ol class="scores"></ol>
+      </div>
+    </div>
+    <audio src="Sounds/Button sound effect.mp3" id="btn-sound"></audio>
+    <audio src="Sounds/Error Sound.mp3" id="error-sound"></audio>
+    <audio src="Sounds/Level Up Sound.mp3" id="levelup-sound"></audio>
+    <audio src="Sounds/Mouse CLick Sound.mp3" id="click-sound"></audio>
+    <script src="app.js"></script>
+  </body>
+</html>
