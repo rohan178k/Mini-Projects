@@ -1,0 +1,125 @@
+body {
+  background-color: #0b0d10;
+  color: #c0c0c0;
+  min-height: 100vh;
+  padding: 2rem 3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+div {
+  display: flex;
+  justify-content: center;
+}
+#task-div {
+  height: fit-content;
+  min-height: 30em;
+  width: 30em;
+  border: 3px solid;
+  border-image: linear-gradient(to right, #008cff, #e100ff) 1;
+  margin: auto;
+  margin-top: 2em;
+  padding: 1em 2em;
+  justify-content: flex-start;
+}
+h1 {
+  text-align: center;
+  color: #e100ff;
+  text-shadow: 0 3px 10px #008cff;
+}
+button:hover {
+  cursor: pointer;
+}
+input {
+  width: 20em;
+  background-color: #161a20;
+  color: #c0c0c0;
+  border: 2px solid;
+  border-image: linear-gradient(to bottom right, #008cff, #e100ff) 1;
+  accent-color: #008cff;
+  caret-color: #fff;
+  padding: 0.5em 1.5em;
+  position: relative;
+}
+input:hover {
+  box-shadow: 20px 0 100px #008cff7a, -20px 0 100px #e100ff79;
+}
+input::placeholder {
+  color: #008cff;
+}
+.inputbtn {
+  padding: 0.5em 1.5em;
+  margin-left: 3em;
+  color: #008cff;
+  text-shadow: 0 0 2px #e100ff;
+  background-color: #161a20;
+  border: none;
+  border-radius: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputbtn::after {
+  content: "";
+  position: absolute;
+  height: 107%;
+  width: 103%;
+  border-radius: 1000px;
+  background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+  z-index: -1;
+}
+.inputbtn:hover {
+  z-index: 0;
+  color: #c0c0c0;
+  text-shadow: 0 0 8px #000;
+  box-shadow: 20px 0 100px #008cff7a, -20px 0 100px #e100ff79;
+}
+ul {
+  line-height: 2;
+}
+li {
+  max-width: 26em;
+}
+li::marker {
+  color: #e100ff;
+  content: "\2609   ";
+}
+.delbtn {
+  padding: 0.4em 1.5em;
+  margin-left: 2em;
+  color: #ff4d00;
+  background-color: #161a20;
+  border: 2px solid;
+  border-image: linear-gradient(to bottom right, #008cff, #e100ff) 1;
+}
+.delbtn:hover {
+  color: #fff;
+  background-color: #e9000084;
+  box-shadow: 0 0 40px #e9000084;
+  border: 2px solid #ff4d00;
+}
+.compbtn {
+  padding: 0.4em 1.5em;
+  margin-left: 2em;
+  color: #00ff26;
+  background-color: #161a20;
+  border: 2px solid;
+  border-image: linear-gradient(to bottom right, #008cff, #e100ff) 1;
+}
+.compbtn:hover {
+  color: #fff;
+  background-color: #00921899;
+  box-shadow: 0 0 40px #00921899;
+  border: 2px solid #00ff26;
+}
+.comptask {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.comptask::marker {
+  color: #c0c0c0;
+  opacity: 0.5;
+}
