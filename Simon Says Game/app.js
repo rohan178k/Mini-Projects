@@ -12,6 +12,7 @@ let description = document.querySelector(".description");
 let body = document.querySelector("body");
 let highscore = document.querySelector(".highscore");
 let scoreList = document.querySelector(".scores");
+let scoreListDiv = document.querySelector(".other-scores");
 
 // Accessing the sound effects from doc
 let btnPressSound = document.querySelector("#btn-sound");
@@ -81,6 +82,7 @@ function reset() {
   } else if (score <= highestlvl) {
     highscore.innerHTML = `Your Highscore was <b> ${highestlvl} </b> !!`;
   }
+  scoreListDiv.classList.add("score-border");
   let newScore = document.createElement("li");
   newScore.innerText = `${score} pts`;
   scoreList.appendChild(newScore);
