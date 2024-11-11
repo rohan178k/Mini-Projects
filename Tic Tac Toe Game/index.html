@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="head-div">
+      <!-- Creating game title with border animation -->
+      <h1 class="game-title">Tic Tac Toe</h1>
+
+      <!-- Creating floating icons for animation -->
+      <div class="floating-icons1">
+        <!-- mark-O -->
+        <div class="mark-O floating-small-circle"></div>
+        <!-- mark-X -->
+        <div class="mark-X floating-small-cross">
+          <div class="line1"></div>
+          <div class="line2"></div>
+        </div>
+      </div>
+      <div class="floating-icons2">
+        <div class="mark-O floating-small-circle"></div>
+        <div class="mark-X floating-small-cross">
+          <div class="line1"></div>
+          <div class="line2"></div>
+        </div>
+      </div>
+
+      <!-- hide class is used to hide elements (display none) -->
+
+      <!-- Creating Gamemode selection -->
+      <h2 class="gamemode-title">Select The Game Mode :</h2>
+      <div class="gamemode-option-div">
+        <!-- Headings for results (using this div to show results) -->
+        <h2 class="local-p1-win hide">Player 1 Victory!</h2>
+        <h2 class="local-p2-win hide">Player 2 Victory!</h2>
+        <h2 class="comp-win hide">You Won!! Congratulations!!</h2>
+        <h2 class="comp-lose hide">You Lost.. Better luck next time..</h2>
+        <h2 class="tie hide">It's a Tie! Play Again!</h2>
+        <!-- Buttons for selecting gamemode and restarting the game -->
+        <button class="gamemode-option local-option blue-btn">Local 1v1</button>
+        <button class="gamemode-option comp-option blue-btn">
+          v/s Computer
+        </button>
+        <button class="gamemode-option end-option hide">Restart</button>
+      </div>
+
+      <!-- Heading for local gamemode -->
+      <div class="local-mode-head hide">
+        <ul>
+          <li class="p1-li p1-turn">
+            <h3>Player 1 :</h3>
+            <div class="mark-O local-mark-O"></div>
+          </li>
+          <li class="p2-li">
+            <h3>Player 2 :</h3>
+            <div class="mark-X local-mark-X">
+              <div class="line1"></div>
+              <div class="line2"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Heading for computer gamemode -->
+      <div class="comp-mode-head hide">
+        <div>
+          <h3>You :</h3>
+          <div class="mark-O comp-mark-O"></div>
+        </div>
+        <div>
+          <h3>Computer :</h3>
+          <div class="mark-X comp-mark-X">
+            <div class="line1"></div>
+            <div class="line2"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toss section to decide 1st turn in comp mode -->
+      <div class="toss-div hide">
+        <h3 class="toss-head">Decide who plays first</h3>
+        <button class="toss-btn green-btn">Toss</button>
+      </div>
+    </div>
+
+    <!-- Gaming Arenas -->
+
+    <!-- For Local Gamemode -->
+    <div class="local-main-container hide">
+      <div class="local-container" id="10010010"></div>
+      <div class="local-container" id="10001000"></div>
+      <div class="local-container" id="10000101"></div>
+      <div class="local-container" id="01010000"></div>
+      <div class="local-container" id="01001011"></div>
+      <div class="local-container" id="01000100"></div>
+      <div class="local-container" id="00110001"></div>
+      <div class="local-container" id="00101000"></div>
+      <div class="local-container" id="00100110"></div>
+      <!-- the ids of each container are used to access positions of containers in JS -->
+      <!-- the digits are in seq of row1 row2 row3 col1 col2 col3 axis1 axis2 -->
+      <!-- 1 is for yes and 0 is for no  -->
+    </div>
+
+    <!-- For Computer Gamemode -->
+    <div class="comp-main-container hide">
+      <div class="comp-container" id="22000020"></div>
+      <div class="comp-container" id="20020000"></div>
+      <div class="comp-container" id="20000202"></div>
+      <div class="comp-container" id="02200000"></div>
+      <div class="comp-container" id="00220022"></div>
+      <div class="comp-container" id="00200200"></div>
+      <div class="comp-container" id="02002002"></div>
+      <div class="comp-container" id="00022000"></div>
+      <div class="comp-container" id="00002220"></div>
+      <!-- the ids of each container are used to access positions of containers in JS -->
+      <!-- the digits are in seq of row1 col1 row2 col2 row3 col3 axis1 axis2 -->
+      <!-- 2 is for yes and 0 is for no  -->
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
