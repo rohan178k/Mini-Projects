@@ -1,6 +1,6 @@
 import pygame # pip install pygame
 import random
-import time
+from datetime import datetime
 from pymongo import MongoClient # pip install pymongo
 
 # 1. Configuration and Constants
@@ -100,9 +100,10 @@ try:
         print("")
         print(f"Game Over!")
         score = length_of_snake-1
+        curr_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         # Save score to database
-        score_data = {"player_name": player_name, "score": score, "difficulty": difficulty}
+        score_data = {"player_name": player_name, "score": score, "difficulty": difficulty, "date_time": curr_time}
         collection.insert_one(score_data)
 
         return(score)
@@ -158,4 +159,5 @@ try:
 
 except Exception as e:
     raise Exception(
+
         "\nThe following error occurred: ", e)
